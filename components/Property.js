@@ -19,7 +19,8 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
         <Flex paddingTop='2' alignItems='center' justifyContent='space-between'>
           <Flex alignItems='center'>
             <Box paddingRight='3' color='green.400'>{isVerified && <GoVerified />}</Box>
-            <Text fontWeight='bold' fontSize='lg'>AED {price}{rentFrequency && `/${rentFrequency}`}</Text>
+            {/* <Text fontWeight='bold' fontSize='lg'> &#8377; {price}{rentFrequency && `/${rentFrequency}`}</Text> */}
+            <Text fontWeight='bold' fontSize='lg'> AED {price}{rentFrequency && `/${rentFrequency}`}</Text>
           </Flex>
           <Box>
             <Avatar size='sm' src={agency?.logo?.url}></Avatar>
