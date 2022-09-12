@@ -49,7 +49,7 @@ export default function SearchFilters() {
       {filters?.map((filter) => (
         <Box key={filter.queryName}>
           <Select onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })} placeholder={filter.placeholder} w='fit-content' p='2' >
-            {filter?.items?.map((item) => (
+            {filter?.items?.map((item,i) => (
               <option value={item.value} key={item.value}>
                 {item.name}
               </option>
@@ -114,3 +114,4 @@ export default function SearchFilters() {
     </Flex>
   );
 }
+
